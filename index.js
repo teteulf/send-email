@@ -2,13 +2,13 @@ import express from "express";
 import { sendEmail } from "./sendEmail.js";
 import "dotenv/config";
 import cors from "cors";
+
 const app = express();
 
 app.use(express.json());
-
 app.use(cors());
 
-app.app.get("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Is the Back-End");
 });
 
@@ -24,4 +24,3 @@ app.post("/", async (req, res) => {
 app.listen(3000, () => {
   console.log("Listen in port : 3000");
 });
-console.log("fdc");
